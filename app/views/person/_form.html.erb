@@ -1,0 +1,17 @@
+
+<%= form_tag "person/new" do %>
+
+  <%= label_tag ("first_name") %>
+  <%= text_field_tag ("first_name") %>
+  <%= label_tag ("last_name") %>
+  <%= text_field_tag ("last_name") %>
+  <%= label_tag ("birth_date") %>
+  <%= date_select :birth_date, id: :actor_birth_date %>
+  <%= label_tag ("description") %>
+  <%= text_field_tag ("description")%>
+  <% radio_button_tag("post", "person", "Actor") %>
+  <% radio_button_tag("post", "person", "Director")%>
+
+  <%= submit_tag "submit" %>
+
+<% end %>
