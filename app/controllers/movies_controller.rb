@@ -5,6 +5,7 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     @movies = Movie.all
+    @directors = Director.all
   end
 
   # GET /movies/1
@@ -15,6 +16,7 @@ class MoviesController < ApplicationController
   # GET /movies/new
   def new
     @movie = Movie.new
+    @directors = Director.all
   end
 
   # GET /movies/1/edit
@@ -24,7 +26,7 @@ class MoviesController < ApplicationController
   # POST /movies
   # POST /movies.json
   def create
-    @movie = Movie.new(movie_params)
+    @movie = Movie.create(title: params[:title], description: params[:description], duration: params[:duration], release_date: params[:release_date], director: params[:Director], address: params[:Address])
 
     respond_to do |format|
       if @movie.save

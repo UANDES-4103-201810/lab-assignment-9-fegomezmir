@@ -24,7 +24,7 @@ class CategoriesController < ApplicationController
   # POST /categories
   # POST /categories.json
   def create
-    @category = Category.new(category_params)
+    @category = Category.create(name: params[:name], description: params[:name])
 
     respond_to do |format|
       if @category.save

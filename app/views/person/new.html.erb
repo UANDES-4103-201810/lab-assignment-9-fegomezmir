@@ -1,2 +1,21 @@
 <h1>New person</h1>
-<%= render "form" %>
+
+
+<%= form_tag('/person/create', method: "post" ) do %>
+
+  <%= label_tag ("First_name") %>
+  <%= text_field_tag ("first_name") %>
+  <%= label_tag ("Last_name") %>
+  <%= text_field_tag ("last_name") %>
+  <%= label_tag ("Birth_date") %>
+  <%= date_field_tag "birth_date" %>
+  <%= label_tag ("Description") %>
+  <%= text_field_tag ("description")%>
+  <%= label_tag ("Actor") %>
+  <%= radio_button_tag(:type, "Actor") %>
+  <%= label_tag ("Director") %>
+  <%= radio_button_tag(:type, "Director")%>
+
+  <%= submit_tag "submit" %>
+
+<% end %>

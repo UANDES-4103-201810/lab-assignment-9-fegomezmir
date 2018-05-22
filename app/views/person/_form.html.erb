@@ -1,14 +1,14 @@
 
 <%= form_tag ("person/new") do %>
 
-  <%= label_tag ("first_name") %>
-  <%= text_field_tag ("first_name") %>
-  <%= label_tag ("last_name") %>
-  <%= text_field_tag ("last_name") %>
-  <%= label_tag ("birth_date") %>
+  <%= label_tag ("First_name") %>
+  <%= text_field_tag ("First_name") %>
+  <%= label_tag ("Last_name") %>
+  <%= text_field_tag ("Last_name") %>
+  <%= label_tag ("Birth_date") %>
   <%= date_select :birth_date, id: :actor_birth_date %>
-  <%= label_tag ("description") %>
-  <%= text_field_tag ("description")%>
+  <%= label_tag ("Description") %>
+  <%= text_field_tag ("Description")%>
   <%= label_tag ("Actor") %>
   <%= radio_button_tag(:actor_button, "Actor") %>
   <%= label_tag ("Director") %>
